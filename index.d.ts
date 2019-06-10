@@ -5,7 +5,7 @@
 // TypeScript Version: 2.8
 
 import * as React from "react";
-import { TextStyle, ViewStyle } from "react-native";
+import { RegisteredStyle, TextStyle } from "react-native";
 
 export interface MarkerProps {
     pressed?: number;
@@ -64,8 +64,8 @@ export interface MultiSliderProps {
     };
 
     customMarker?: React.ComponentType<MarkerProps>;
-    customLabelStyle?: ViewStyle;
-    customLabelTextStyle?: TextStyle;
+    customLabelStyle?: RegisteredStyle;
+    customLabelTextStyle?: RegisteredStyle;
     labelUnits?: string;
 
     /**
@@ -100,28 +100,28 @@ export interface MultiSliderProps {
      *
      * Default { height: 30 }
      */
-    containerStyle?: ViewStyle;
+    containerStyle?: RegisteredStyle;
 
     /**
      * Customise the track
      *
      * Default { borderRadius: 7, height: 3.5 }
      */
-    trackStyle?: ViewStyle;
+    trackStyle?: RegisteredStyle;
 
     /**
      * Style for the track up to a single marker or between double markers
      *
      * Default { backgroundColor: 'blue' }
      */
-    selectedStyle?: ViewStyle;
+    selectedStyle?: RegisteredStyle;
 
     /**
      * Style for remaining track
      *
      * Default { backgroundColor: 'grey' }
      */
-    unselectedStyle?: ViewStyle;
+    unselectedStyle?: RegisteredStyle;
 
     /**
      * Customise the marker's style
@@ -135,14 +135,14 @@ export interface MultiSliderProps {
      *     borderColor: 'grey',
      * }
      */
-    markerStyle?: ViewStyle;
+    markerStyle?: RegisteredStyle;
 
     /**
      * Style to be given to marker when pressed
      *
      * Default { backgroundColor:'#D3D3D3' }
      */
-    pressedMarkerStyle?: ViewStyle;
+    pressedMarkerStyle?: RegisteredStyle;
 
     allowOverlap?: boolean;
     minMarkerOverlapDistance?: number;
